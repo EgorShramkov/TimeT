@@ -77,6 +77,9 @@ def make_app():
          (r"/static/(.*)", tornado.web.StaticFileHandler, {"path": "./static"})],
     debug=True)
 
+# Создаём приложение и сохраняем его в переменную
+tornado_app = make_app()
+
 
 if __name__ == "__main__":
     app = make_app()  # Создаем серверное приложение
