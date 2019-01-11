@@ -1,1 +1,1 @@
-web: gunicorn timeT:tornado_app --log-file=- --log-level=debug
+web: gunicorn timeT.serverTT:tornado_app --log-file=- --log-level=debug
