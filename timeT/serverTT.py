@@ -92,6 +92,8 @@ def make_app():
     debug=True)
 
 
+tornado_app = make_app()
+
 if __name__ == "__main__":
     app = make_app()  # Создаем серверное приложение
     app.listen(port)  # Даем приложению сетевой порт для работы
