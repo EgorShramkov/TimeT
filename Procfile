@@ -1,1 +1,1 @@
-web: gunicorn  -k tornado timeT.serverTT:tornado_app --log-file=- --log-level=debug
+web: gunicorn  -k tornado telepot timeT.serverTT:tornado_app --log-file=- --log-level=debug
