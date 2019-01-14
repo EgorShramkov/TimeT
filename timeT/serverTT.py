@@ -58,6 +58,7 @@ def save_send(bot, self,NewLesson, i, Lesson, NOM, MAX, chat_id, day, allLesson)
      while i < MAX:
         lesson = self.get_argument(Lesson[i])
         les = int(lesson)
+        les = les - 1
         y=0
         while y < 42:
             if les == y:
