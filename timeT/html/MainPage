@@ -29,19 +29,19 @@
 						     <body>
 							 <form>
 							 	<p><select name="1_5_1">
-							    <option input type="radio" value="math" >Математика</option>
-							    <option input type="radio" value="eng" >Английский</option>
-							    <option input type="radio" value="rus" >Русский язык</option>
-							    <option input type="radio" value="geo" >География</option>
-                                <option input type="radio" value="ict">Информатика</option>
-                                <option input type="radio" value="hist">История</option>
-                                <option input type="radio" value="soc">Обществознание</option>
-                                <option input type="radio" value="lit">Литература</option>
-                                <option input type="radio" value="pe">Физ-ра</option>
-                                <option input type="radio" value="bio"selected>Биология</option>
-                                <option input type="radio" value="chine" >Вт. ин. яз</option>
-                                <option input type="radio" value="eng/ict">Англ.яз/Инф.</option>
-                                <option input type="radio" value="non"> "-" </option>
+							    <option input type="radio" value="1" >Математика</option>
+							    <option input type="radio" value="2" >Английский</option>
+							    <option input type="radio" value="3" >Русский язык</option>
+							    <option input type="radio" value="4" >География</option>
+                                <option input type="radio" value="5">Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10"selected>Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="12">Англ.яз/Инф.</option>
+                                <option input type="radio" value="13"> "-" </option>
 							   </select> 
 							</form> 
 							</body> 
@@ -58,15 +58,15 @@
 							    <option input type="radio" value="2">Английский</option>
 							    <option input type="radio" value="3">Русский язык</option>
 							    <option input type="radio" value="4">География</option>
-                                <option input type="5" value="ict">Информатика</option>
-                                <option input type="6" value="hist">История</option>
-                                <option input type="7" value="soc">Обществознание</option>
-                                <option input type="8" value="lit">Литература</option>
-                                <option input type="9" value="pe">Физ-ра</option>
-                                <option input type="10" value="bio"selected>Биология</option>
-                                <option input type="11" value="chine" >Вт. ин. яз</option>
-                                <option input type="12" value="eng/ict">Англ.яз/Инф.</option>
-                                <option input type="13" value="non"> "-" </option>
+                                <option input type="radio" value="5">Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10"selected>Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="12">Англ.яз/Инф.</option>
+                                <option input type="radio" value="13"> "-" </option>
 							    </select> 
 					         </form> 
                              </body>
@@ -83,15 +83,15 @@
 							    <option input type="radio" value="2">Английский</option>
 							    <option input type="radio" value="3">Русский язык</option>
 							    <option input type="radio" value="4">География</option>
-                                <option input type="5" value="ict">Информатика</option>
-                                <option input type="6" value="hist">История</option>
-                                <option input type="7" value="soc"selected>Обществознание</option>
-                                <option input type="8" value="lit">Литература</option>
-                                <option input type="9" value="pe">Физ-ра</option>
-                                <option input type="10" value="bio">Биология</option>
-                                <option input type="11" value="chine" >Вт. ин. яз</option>
-                                <option input type="12" value="eng/ict">Англ.яз/Инф.</option>
-                                <option input type="13" value="non"> "-" </option>
+                                <option input type="radio" value="5">Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7"selected>Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="12/ict">Англ.яз/Инф.</option>
+                                <option input type="radio" value="13"> "-" </option>
 					            </select> 
 							 </form> 
                              </body>
@@ -108,15 +108,15 @@
 							    <option input type="radio" value="2">Английский</option>
 							    <option input type="radio" value="3">Русский язык</option>
 							    <option input type="radio" value="4">География</option>
-                                <option input type="5" value="ict">Информатика</option>
-                                <option input type="6" value="hist">История</option>
-                                <option input type="7" value="soc">Обществознание</option>
-                                <option input type="8" value="lit">Литература</option>
-                                <option input type="9" value="pe">Физ-ра</option>
-                                <option input type="10" value="bio">Биология</option>
-                                <option input type="11" value="chine" >Вт. ин. яз</option>
-                                <option input type="12" value="eng/ict">Англ.яз/Инф.</option>
-                                <option input type="13" value="non"> "-" </option>
+                                <option input type="radio" value="5">Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="12">Англ.яз/Инф.</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							</body>
@@ -133,15 +133,15 @@
 							    <option input type="radio" value="2">Английский</option>
 							    <option input type="radio" value="3">Русский язык</option>
 							    <option input type="radio" value="4">География</option>
-                                <option input type="5" value="ict"selected>Информатика</option>
-                                <option input type="6" value="hist">История</option>
-                                <option input type="7" value="soc">Обществознание</option>
-                                <option input type="8" value="lit">Литература</option>
-                                <option input type="9" value="pe">Физ-ра</option>
-                                <option input type="10" value="bio">Биология</option>
-                                <option input type="11" value="chine" >Вт. ин. яз</option>
-                                <option input type="12" value="eng/ict">Англ.яз/Инф.</option>
-                                <option input type="13" value="non"> "-" </option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="12">Англ.яз/Инф.</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form> 
 							 </body>
@@ -158,15 +158,15 @@
 							    <option input type="radio" value="2">Английский</option>
 							    <option input type="radio" value="3">Русский язык</option>
 							    <option input type="radio" value="4">География</option>
-                                <option input type="5" value="ict"selected>Информатика</option>
-                                <option input type="6" value="hist">История</option>
-                                <option input type="7" value="soc">Обществознание</option>
-                                <option input type="8" value="lit">Литература</option>
-                                <option input type="9" value="pe">Физ-ра</option>
-                                <option input type="10" value="bio">Биология</option>
-                                <option input type="11" value="chine" >Вт. ин. яз</option>
-                                <option input type="12" value="eng/ict">Англ.яз/Инф.</option>
-                                <option input type="13" value="non"> "-" </option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="12">Англ.яз/Инф.</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							 </body>
@@ -208,19 +208,19 @@
                              <body>
                              <form> 
 							    <p><select name="1_6_1">
-							    <option input type="radio" value="math">Математика</option>
-							    <option input type="radio" value="eng">Английский</option>
-							    <option input type="radio" value="rus">Русский язык</option>
-							    <option input type="radio" value="geo">География</option>
-                                <option input type="radio" value="ict"selected>Информатика</option>
-                                <option input type="radio" value="hist">История</option>
-                                <option input type="radio" value="soc">Обществознание</option>
-                                <option input type="radio" value="lit">Литература</option>
-                                <option input type="radio" value="pe">Физ-ра</option>
-                                <option input type="radio" value="bio">Биология</option>
-                                <option input type="radio" value="chine" >Вт. ин. яз</option>
-                                <option input type="radio" value="rit">Риторика</option>
-                                <option input type="radio" value="non"> "-" </option>
+							    <option input type="radio" value="1">Математика</option>
+							    <option input type="radio" value="2">Английский</option>
+							    <option input type="radio" value="3">Русский язык</option>
+							    <option input type="radio" value="4">География</option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="14">Риторика</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							 </body>
@@ -233,19 +233,19 @@
                              <body>
                              <form> 
 							    <p><select name="2_6_1">
-							    <option input type="radio" value="math">Математика</option>
-							    <option input type="radio" value="eng">Английский</option>
-							    <option input type="radio" value="rus">Русский язык</option>
-							    <option input type="radio" value="geo">География</option>
-                                <option input type="radio" value="ict"selected>Информатика</option>
-                                <option input type="radio" value="hist">История</option>
-                                <option input type="radio" value="soc">Обществознание</option>
-                                <option input type="radio" value="lit">Литература</option>
-                                <option input type="radio" value="pe">Физ-ра</option>
-                                <option input type="radio" value="bio">Биология</option>
-                                <option input type="radio" value="chine" >Вт. ин. яз</option>
-                                <option input type="radio" value="rit">Риторика</option>
-                                <option input type="radio" value="non"> "-" </option>
+							    <option input type="radio" value="1">Математика</option>
+							    <option input type="radio" value="2">Английский</option>
+							    <option input type="radio value="3">Русский язык</option>
+							    <option input type="radio" value="4">География</option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="14">Риторика</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							 </body>
@@ -258,19 +258,19 @@
                              <body>
                              <form> 
 							    <p><select name="3_6_1">
-							    <option input type="radio" value="math">Математика</option>
-							    <option input type="radio" value="eng">Английский</option>
-							    <option input type="radio" value="rus">Русский язык</option>
-							    <option input type="radio" value="geo">География</option>
-                                <option input type="radio" value="ict"selected>Информатика</option>
-                                <option input type="radio" value="hist">История</option>
-                                <option input type="radio" value="soc">Обществознание</option>
-                                <option input type="radio" value="lit">Литература</option>
-                                <option input type="radio" value="pe">Физ-ра</option>
-                                <option input type="radio" value="bio">Биология</option>
-                                <option input type="radio" value="chine" >Вт. ин. яз</option>
-                                <option input type="radio" value="rit">Риторика</option>
-                                <option input type="radio" value="non"> "-" </option>
+							    <option input type="radio" value="1">Математика</option>
+							    <option input type="radio" value="2">Английский</option>
+							    <option input type="radio" value="3">Русский язык</option>
+							    <option input type="radio" value="4">География</option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="14">Риторика</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							 </body>	
@@ -283,19 +283,19 @@
                              <body>
                              <form> 
 							    <p><select name="4_6_1">
-							    <option input type="radio" value="math">Математика</option>
-							    <option input type="radio" value="eng">Английский</option>
-							    <option input type="radio" value="rus">Русский язык</option>
-							    <option input type="radio" value="geo">География</option>
-                                <option input type="radio" value="ict"selected>Информатика</option>
-                                <option input type="radio" value="hist">История</option>
-                                <option input type="radio" value="soc">Обществознание</option>
-                                <option input type="radio" value="lit">Литература</option>
-                                <option input type="radio" value="pe">Физ-ра</option>
-                                <option input type="radio" value="bio">Биология</option>
-                                <option input type="radio" value="chine" >Вт. ин. яз</option>
-                                <option input type="radio" value="rit">Риторика</option>
-                                <option input type="radio" value="non"> "-" </option>
+							    <option input type="radio" value="1">Математика</option>
+							    <option input type="radio" value="2">Английский</option>
+							    <option input type="radio" value="3">Русский язык</option>
+							    <option input type="radio" value="4">География</option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="14">Риторика</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							 </body> 							
@@ -308,19 +308,19 @@
                              <body>
                              <form> 
 							    <p><select name="5_6_1">
-							    <option input type="radio" value="math">Математика</option>
-							    <option input type="radio" value="eng">Английский</option>
-							    <option input type="radio" value="rus">Русский язык</option>
-							    <option input type="radio" value="geo">География</option>
-                                <option input type="radio" value="ict"selected>Информатика</option>
-                                <option input type="radio" value="hist">История</option>
-                                <option input type="radio" value="soc">Обществознание</option>
-                                <option input type="radio" value="lit">Литература</option>
-                                <option input type="radio" value="pe">Физ-ра</option>
-                                <option input type="radio" value="bio">Биология</option>
-                                <option input type="radio" value="chine" >Вт. ин. яз</option>
-                                <option input type="radio" value="rit">Риторика</option>
-                                <option input type="radio" value="non"> "-" </option>
+							    <option input type="radio" value="1">Математика</option>
+							    <option input type="radio" value="2">Английский</option>
+							    <option input type="radio" value="3">Русский язык</option>
+							    <option input type="radio" value="4">География</option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="14">Риторика</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							 </body>
@@ -333,19 +333,19 @@
                              <body>
                              <form> 
 							    <p><select name="6_6_1">
-							    <option input type="radio" value="math">Математика</option>
-							    <option input type="radio" value="eng">Английский</option>
-							    <option input type="radio" value="rus">Русский язык</option>
-							    <option input type="radio" value="geo">География</option>
-                                <option input type="radio" value="ict"selected>Информатика</option>
-                                <option input type="radio" value="hist">История</option>
-                                <option input type="radio" value="soc">Обществознание</option>
-                                <option input type="radio" value="lit">Литература</option>
-                                <option input type="radio" value="pe">Физ-ра</option>
-                                <option input type="radio" value="bio">Биология</option>
-                                <option input type="radio" value="chine" >Вт. ин. яз</option>
-                                <option input type="radio" value="rit">Риторика</option>
-                                <option input type="radio" value="non"> "-" </option>
+							    <option input type="radio" value="1">Математика</option>
+							    <option input type="radio" value="2">Английский</option>
+							    <option input type="radio" value="3">Русский язык</option>
+							    <option input type="radio" value="4">География</option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="14">Риторика</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							 </body>							
@@ -358,19 +358,19 @@
                              <body>
                              <form> 
 							    <p><select name="7_6_1">
-							    <option input type="radio" value="math">Математика</option>
-							    <option input type="radio" value="eng">Английский</option>
-							    <option input type="radio" value="rus">Русский язык</option>
-							    <option input type="radio" value="geo">География</option>
-                                <option input type="radio" value="ict"selected>Информатика</option>
-                                <option input type="radio" value="hist">История</option>
-                                <option input type="radio" value="soc">Обществознание</option>
-                                <option input type="radio" value="lit">Литература</option>
-                                <option input type="radio" value="pe">Физ-ра</option>
-                                <option input type="radio" value="bio">Биология</option>
-                                <option input type="radio" value="chine" >Вт. ин. яз</option>
-                                <option input type="radio" value="rit">Риторика</option>
-                                <option input type="radio" value="non"> "-" </option>
+							    <option input type="radio" value="1">Математика</option>
+							    <option input type="radio" value="2">Английский</option>
+							    <option input type="radio" value="3">Русский язык</option>
+							    <option input type="radio" value="4">География</option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="14">Риторика</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							 </body>
@@ -383,19 +383,19 @@
                              <body>
                              <form> 
 							    <p><select name="8_6_1">
-							    <option input type="radio" value="math">Математика</option>
-							    <option input type="radio" value="eng">Английский</option>
-							    <option input type="radio" value="rus">Русский язык</option>
-							    <option input type="radio" value="geo">География</option>
-                                <option input type="radio" value="ict"selected>Информатика</option>
-                                <option input type="radio" value="hist">История</option>
-                                <option input type="radio" value="soc">Обществознание</option>
-                                <option input type="radio" value="lit">Литература</option>
-                                <option input type="radio" value="pe">Физ-ра</option>
-                                <option input type="radio" value="bio">Биология</option>
-                                <option input type="radio" value="chine" >Вт. ин. яз</option>
-                                <option input type="radio" value="rit">Риторика</option>
-                                <option input type="radio" value="non"> "-" </option>
+							    <option input type="radio" value="1">Математика</option>
+							    <option input type="radio" value="2">Английский</option>
+							    <option input type="radio" value="3">Русский язык</option>
+							    <option input type="radio" value="4">География</option>
+                                <option input type="radio" value="5"selected>Информатика</option>
+                                <option input type="radio" value="6">История</option>
+                                <option input type="radio" value="7">Обществознание</option>
+                                <option input type="radio" value="8">Литература</option>
+                                <option input type="radio" value="9">Физ-ра</option>
+                                <option input type="radio" value="10">Биология</option>
+                                <option input type="radio" value="11" >Вт. ин. яз</option>
+                                <option input type="radio" value="14">Риторика</option>
+                                <option input type="radio" value="13"> "-" </option>
 						        </select> 
 							 </form>
 							 </body> 					    
