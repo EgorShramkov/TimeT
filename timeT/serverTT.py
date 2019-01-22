@@ -102,10 +102,33 @@ class BackHandler(tornado.web.RequestHandler):
         
 
 class MonPageHandler(tornado.web.RequestHandler):                   
-
      def post(self):   
         self.render(pages["admin_page_mon"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
 
+class TuePageHandler(tornado.web.RequestHandler):                   
+     def post(self):   
+        self.render(pages["admin_page_tue"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+
+
+class WedPageHandler(tornado.web.RequestHandler):                   
+     def post(self):   
+        self.render(pages["admin_page_wed"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+
+
+class ThuPageHandler(tornado.web.RequestHandler):                   
+     def post(self):   
+        self.render(pages["admin_page_thu"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+
+
+class FriPageHandler(tornado.web.RequestHandler):                   
+     def post(self):   
+        self.render(pages["admin_page_fri"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+
+
+
+
+        
+        
 
 def make_app():
     return tornado.web.Application([
