@@ -108,8 +108,45 @@ class SaveMonHandler(tornado.web.RequestHandler):
      def post(self):   
         day = 'понедельник'
         bot = telepot.Bot(TOKEN)    
-        save_send(bot,self,NewMonLesson,Monlesson,NOM_mass,MAX_mass,chat_id_5,day,allLesson);        
+        save_send(bot,self,NewMonLesson,Monlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
         self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+
+class SaveTueHandler(tornado.web.RequestHandler):       
+  
+     def post(self):   
+        day = 'вторник'
+        bot = telepot.Bot(TOKEN)    
+        save_send(bot,self,NewTueLesson,Tuelesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
+        self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+        
+class SaveWedHandler(tornado.web.RequestHandler):       
+  
+     def post(self):   
+        day = 'среда'
+        bot = telepot.Bot(TOKEN)    
+        save_send(bot,self,NewWedLesson,Wedlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
+        self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+        
+class SaveThuHandler(tornado.web.RequestHandler):       
+  
+     def post(self):   
+        day = 'четверг'
+        bot = telepot.Bot(TOKEN)    
+        save_send(bot,self,NewThuLesson,Thulesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
+        self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+        
+class SaveFriHandler(tornado.web.RequestHandler):       
+  
+     def post(self):   
+        day = 'пятница'
+        bot = telepot.Bot(TOKEN)    
+        save_send(bot,self,NewFriLesson,Frilesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
+        self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+        
+
+
+
+
         
 
 class BackHandler(tornado.web.RequestHandler):                   
