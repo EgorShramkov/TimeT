@@ -100,19 +100,16 @@ class SaveHandler(tornado.web.RequestHandler):
         day_id = int(day_id_str)
         day = days[day_id]
         bot = telepot.Bot(TOKEN) 
-        if day_id == '0':
-            lesson = non
         if day_id == '1':
-            lesson = Monlesson
+            save_send(bot,self,NewLesson,Monlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);
         if day_id == '2':
-            lesson = Tuelesson
+            save_send(bot,self,NewLesson,Tuelesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);
         if day_id == '3':
-            lesson = Wedlesson
+            save_send(bot,self,NewLesson,Wedlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);
         if day_id == '4':
-            lesson = Thulesson
-        if day_id == '5':
-            lesson = Frilesson   
-        save_send(bot,self,NewLesson,lesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
+            save_send(bot,self,NewLesson,Thulesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);
+        if day_id == '5':   
+            save_send(bot,self,NewLesson,Frilesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
         self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
 
 class BackHandler(tornado.web.RequestHandler):                   
