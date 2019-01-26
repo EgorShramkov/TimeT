@@ -5,7 +5,7 @@ import tornado.web
 import os
 import re
 
-
+chat_id_teacher='-1001284124826'
 chat_id_5 = '-1001368635243'
 chat_id_6 = '-1001358437243'
 chat_id_7 = '-1001445027946'
@@ -50,9 +50,9 @@ pages = {
     "all_day": "./html/all_day.html"
 }
 
-def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id, day, allLesson):
+def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id, day, allLesson, chat_id_teachers):
    nclas=0
-   nlesson=0
+   nlesson=0   
    for nclas in range(7):
      i=0
      MAX = MAX_mass[nclas]     
@@ -73,6 +73,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id, day, allLesson)
         nlesson = nlesson + 1
      chat_id = chat_id_mass[nclas]
      bot.sendMessage(chat_id, text)
+     bot.sendMessage(chat_id_teachers, text)
      
    return
 
