@@ -62,7 +62,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id, day, allLesson)
         les = int(lesson)
         les = les - 1
         y=0
-        while y < 42:
+        while y < 43:
             if les == y:
                NewLesson[nlesson] = allLesson[y]
                y = 42
