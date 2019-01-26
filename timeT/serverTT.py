@@ -50,7 +50,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
      i=0
      MAX = MAX_mass[nclas]     
      text ='Измененное расписание для ' + NOM[nclas] +' класса на ' + day + ' \n'
-     text_teacher =text_teacher +  'Для ' + NOM[nclas] +  'класса: \n' 
+     text_teacher =text_teacher +  '  ' +  'Для ' + NOM[nclas] +  'класса: \n' 
      while i < MAX:
         lesson = self.get_argument(Lesson[nlesson])
         les = int(lesson)
@@ -62,8 +62,8 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
                y = 42
             y = y + 1       
         x=str(i+1)
-        text = text + x + '. ' + NewLesson[nlesson]
-        text_teacher = text_teacher + x + '. ' + NewLesson[nlesson]
+        text = text  +  '  '+ x + '. ' + NewLesson[nlesson]
+        text_teacher = text_teacher '    '+ x + '. ' + NewLesson[nlesson]
         i=i+1 
         nlesson = nlesson + 1
      chat_id = chat_id_mass[nclas]
