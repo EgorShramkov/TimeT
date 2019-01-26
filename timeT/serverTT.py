@@ -47,6 +47,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
    nlesson=0   
    for nclas in range(7):
      i=0
+     text_teacher = 0
      MAX = MAX_mass[nclas]     
      text = 'Измененное расписание для ' + NOM[nclas] +' класса на ' + day + ' \n'
      while i < MAX:
@@ -65,7 +66,8 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
         nlesson = nlesson + 1
      chat_id = chat_id_mass[nclas]
      bot.sendMessage(chat_id, text)
-     bot.sendMessage(chat_id_teachers, text)
+     text_teacher = text_teacher + text
+   bot.sendMessage(chat_id_teachers, text_teacher)
      
    return
 
