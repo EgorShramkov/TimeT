@@ -11,7 +11,7 @@ TOKEN = '770819628:AAFoiGUAI3mrhwgTSwCc_Ps0WPigqhslDBI'
 admin_password = "123456"
 port = 8888
 db_path = "./timetable.db"
-days= ['NON', 'Понедельник' , 'Вторник', 'Среда', 'Четверг', 'Пятница']
+days= ['NON', 'понедельник' , 'вторник', 'среду', 'четверг', 'пятницу']
 NOM_mass = ['пятого','шестого','седьмого','восьмого','девятого','десятого','одиннадцатого']
 chat_id_mass = ['-1001368635243','-1001358437243','-1001445027946','-1001477729156','-1001364844389', '-1001208856454','-1001261650074']
 MAX_mass=[7,8,8,8,10,10,10]
@@ -47,7 +47,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
    nlesson=0   
    for nclas in range(7):
      i=0
-     text_teacher = 0
+     text_teacher = ''
      MAX = MAX_mass[nclas]     
      text = 'Измененное расписание для ' + NOM[nclas] +' класса на ' + day + ' \n'
      while i < MAX:
