@@ -100,21 +100,21 @@ class SaveHandler(tornado.web.RequestHandler):
         day_id = int(day_id_str)
         day = days[day_id]
         bot = telepot.Bot(TOKEN) 
-        if day_id == '0':
+        if day_id == 0:
             self.render(pages["all_day"], message="Ошибка.Пишите Егору.")
-        if day_id == '1':
+        if day_id == 1:
             save_send(bot,self,NewLesson,Monlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
-        if day_id == '2':
+        if day_id == 2:
             save_send(bot,self,NewLesson,Tuelesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
-        if day_id == '3':
+        if day_id == 3:
             save_send(bot,self,NewLesson,Wedlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
-        if day_id == '4':
+        if day_id == 4:
             save_send(bot,self,NewLesson,Thulesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
-        if day_id == '5':   
+        if day_id == 5:   
             save_send(bot,self,NewLesson,Frilesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
 
