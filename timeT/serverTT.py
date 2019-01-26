@@ -19,7 +19,7 @@ TOKEN = '770819628:AAFoiGUAI3mrhwgTSwCc_Ps0WPigqhslDBI'
 admin_password = "123456"
 port = 8888
 db_path = "./timetable.db"
-
+days= ['NON', 'Понедельник' , 'Вторник', 'Среда', 'Четверг', 'Пятница']
 NOM_mass = ['пятого','шестого','седьмого','восьмого','девятого','десятого','одиннадцатого']
 chat_id_mass = ['-1001368635243','-1001358437243','-1001445027946','-1001477729156','-1001364844389', '-1001208856454','-1001261650074']
 MAX_mass=[7,8,8,8,10,10,10]
@@ -33,18 +33,8 @@ Thulesson =['1_5_4','2_5_4','3_5_4','4_5_4','5_5_4','6_5_4','7_5_4',
 '1_6_4','2_6_4','3_6_4','4_6_4','5_6_4','6_6_4','7_6_4', '8_6_4','1_7_4','2_7_4','3_7_4','4_7_4','5_7_4','6_7_4','7_7_4', '8_7_4','1_8_4','2_8_4','3_8_4','4_8_4','5_8_4','6_8_4','7_8_4', '8_8_4','1_9_4','2_9_4','3_9_4','4_9_4','5_9_4','6_9_4','7_9_4', '8_9_4', '9_9_4','10_9_4','1_10_4','2_10_4','3_10_4','4_10_4','5_10_4','6_10_4','7_10_4', '8_10_4','9_10_4','10_10_4', '1_11_4','2_11_4','3_11_4','4_11_4','5_11_4','6_11_4','7_11_4', '8_11_4', '9_11_4', '10_11_4']          
 Frilesson =['1_5_5','2_5_5','3_5_5','4_5_5','5_5_5','6_5_5','7_5_5',
 '1_6_5','2_6_5','3_6_5','4_6_5','5_6_5','6_6_5','7_6_5', '8_6_5','1_7_5','2_7_5','3_7_5','4_7_5','5_7_5','6_7_5','7_7_5', '8_7_5','1_8_5','2_8_5','3_8_5','4_8_5','5_8_5','6_8_5','7_8_5', '8_8_5','1_9_5','2_9_5','3_9_5','4_9_5','5_9_5','6_9_5','7_9_5', '8_9_5', '9_9_5','10_9_5','1_10_5','2_10_5','3_10_5','4_10_5','5_10_5','6_10_5','7_10_5', '8_10_5','9_10_5','10_10_5', '1_11_5','2_11_5','3_11_5','4_11_5','5_11_5','6_11_5','7_11_5', '8_11_5', '9_11_5', '10_11_5']          
-
-NewMonLesson = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',
+NewLesson = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',
 '','','','','','','', '', '', '','','','','','','','','', '', '','','','','','','','','', '', '']
-NewTueLesson = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',
-'','','','','','','', '', '', '','','','','','','','','', '', '','','','','','','','','', '', '']
-NewWedLesson = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',
-'','','','','','','', '', '', '','','','','','','','','', '', '','','','','','','','','', '', '']
-NewThuLesson = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',
-'','','','','','','', '', '', '','','','','','','','','', '', '','','','','','','','','', '', '']
-NewFriLesson = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',
-'','','','','','','', '', '', '','','','','','','','','', '', '','','','','','','','','', '', '']
-
 allLesson = ['Математика\n', 'Английский язык\n', 'Русский язык\n', 'География\n', 'Информатика\n', 'История\n', 'Обществознание\n', 'Литература\n', 'Физкультура\n', 'Биология\n', 'Второй иностранный\n', 'Английский язык\n', '"-"\n', 'Риторика\n' , 'Алгебра\n', 'Геометрия\n' , 'ОГЭ Био/Ист/Англ\n', 'ОГЭ Мат1/Мат2\n', 'ОГЭ Общ\n', 'ОГЭ география/инф\n', 'ОГЭ русский\n', 'Геом Р/История Р/Лит-ра Р/Био Р\n' , 'Геом Р/Биология Р\n' , 'Общ(экон)/ русский ЕГЭ\n',  'Обществознание Р\n', 'Алгебра Р/ Геометрия Б\n', 'Алг Р/ Ист Р/ Лит Р/ Хим Р\n', 'Инф Р/Физ-ра\n', 'Алгебра Б/Франц Р/Инф Р\n', 'Геом Р/ История Р/ Литература р\n', 'Алг Р/ Фин гр/ Общ Р\n' , 'История Р/Б\n', 'Общество Р/Б\n','Алг Р/История Р\n', 'Алг Р/Лит Р/Олимп История\n' , 'Алг Б/ Инф Р\n'  
 , 'Геом Б/ Инф Б/ Франц Р\n', 'Алгебра Р/Литература Р\n' , 'Алгебра Р/ История Р\n', 'Общ Р/Био Р/Физ-ра\n' ,'Литература/ Физ-ра\n', 'Физика\n', 'Химия\n']  
 
@@ -103,40 +93,22 @@ class Page_all_dayHandler(tornado.web.RequestHandler):
             self.render(pages["all_day"], message="Выберети, пожалуйста, день в который будут вноситься изменения.")
 
 
-class SaveMonHandler(tornado.web.RequestHandler):       
+class SaveHandler(tornado.web.RequestHandler):       
      def post(self):   
-        day = 'понедельник'
-        bot = telepot.Bot(TOKEN)    
-        save_send(bot,self,NewMonLesson,Monlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
+        day = days[day_id]
+        bot = telepot.Bot(TOKEN) 
+        if day_id == '1':
+            lesson = MonLesson
+        if day_id == '2':
+            lesson = TueLesson
+        if day_id == '3':
+            lesson = WedLesson
+        if day_id == '4':
+            lesson = ThuLesson
+        if day_id == '5':
+            lesson = FriLesson   
+        save_send(bot,self,NewLesson,lesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
         self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
-
-class SaveTueHandler(tornado.web.RequestHandler):       
-     def post(self):   
-        day = 'вторник'
-        bot = telepot.Bot(TOKEN)    
-        save_send(bot,self,NewTueLesson,Tuelesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
-        self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
-        
-class SaveWedHandler(tornado.web.RequestHandler):         
-     def post(self):   
-        day = 'среда'
-        bot = telepot.Bot(TOKEN)    
-        save_send(bot,self,NewWedLesson,Wedlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
-        self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
-        
-class SaveThuHandler(tornado.web.RequestHandler):       
-     def post(self):   
-        day = 'четверг'
-        bot = telepot.Bot(TOKEN)    
-        save_send(bot,self,NewThuLesson,Thulesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
-        self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
-        
-class SaveFriHandler(tornado.web.RequestHandler):       
-     def post(self):   
-        day = 'пятница'
-        bot = telepot.Bot(TOKEN)    
-        save_send(bot,self,NewFriLesson,Frilesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
-        self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")                
 
 class BackHandler(tornado.web.RequestHandler):                   
      def post(self):   
@@ -148,26 +120,26 @@ class BackMainHandler(tornado.web.RequestHandler):
 
 class MonPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_mon"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+        self.render(pages["admin_page_mon"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_query_argument("day_id", default=0))
 
 class TuePageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_tue"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+        self.render(pages["admin_page_tue"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_query_argument("day_id", default=0))
 
 
 class WedPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_wed"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+        self.render(pages["admin_page_wed"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_query_argument("day_id", default=0))
 
 
 class ThuPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_thu"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+        self.render(pages["admin_page_thu"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_query_argument("day_id", default=0))
 
 
 class FriPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_fri"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+        self.render(pages["admin_page_fri"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.",day_id=self.get_query_argument("day_id", default=0))
 
 
 
