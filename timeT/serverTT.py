@@ -95,7 +95,8 @@ class Page_all_dayHandler(tornado.web.RequestHandler):
 
 class SaveHandler(tornado.web.RequestHandler):      
             
-     def post(self):   
+     def post(self):  
+        day_id = self.get_argument("day_id", default=0)
         day = days[day_id]
         bot = telepot.Bot(TOKEN) 
         if day_id == '1':
@@ -121,26 +122,26 @@ class BackMainHandler(tornado.web.RequestHandler):
 
 class MonPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_mon"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_argument("day_id", default=0))
+        self.render(pages["admin_page_mon"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
 
 class TuePageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_tue"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_query_argument("day_id", default=0))
+        self.render(pages["admin_page_tue"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
 
 
 class WedPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_wed"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_query_argument("day_id", default=0))
+        self.render(pages["admin_page_wed"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
 
 
 class ThuPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_thu"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_query_argument("day_id", default=0))
+        self.render(pages["admin_page_thu"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
 
 
 class FriPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_fri"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.",day_id=self.get_query_argument("day_id", default=0))
+        self.render(pages["admin_page_fri"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
 
 
 
