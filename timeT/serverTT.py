@@ -100,6 +100,8 @@ class SaveHandler(tornado.web.RequestHandler):
         day_id = int(day_id_str)
         day = days[day_id]
         bot = telepot.Bot(TOKEN) 
+        if day_id == '0':
+            lesson = non
         if day_id == '1':
             lesson = MonLesson
         if day_id == '2':
