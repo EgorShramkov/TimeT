@@ -94,7 +94,7 @@ class Page_all_dayHandler(tornado.web.RequestHandler):
 
 
 class SaveHandler(tornado.web.RequestHandler):       
-     def post(self):   
+     def post(self, day_id):   
         day = days[day_id]
         bot = telepot.Bot(TOKEN) 
         if day_id == '1':
