@@ -103,15 +103,15 @@ class SaveHandler(tornado.web.RequestHandler):
         if day_id == '0':
             lesson = non
         if day_id == '1':
-            lesson = MonLesson
+            lesson = Monlesson
         if day_id == '2':
-            lesson = TueLesson
+            lesson = Tuelesson
         if day_id == '3':
-            lesson = WedLesson
+            lesson = Wedlesson
         if day_id == '4':
-            lesson = ThuLesson
+            lesson = Thulesson
         if day_id == '5':
-            lesson = FriLesson   
+            lesson = Frilesson   
         save_send(bot,self,NewLesson,lesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson);        
         self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
 
