@@ -93,8 +93,9 @@ class Page_all_dayHandler(tornado.web.RequestHandler):
             self.render(pages["all_day"], message="Выберети, пожалуйста, день в который будут вноситься изменения.")
 
 
-class SaveHandler(tornado.web.RequestHandler):       
-     def post(self, day_id):   
+class SaveHandler(tornado.web.RequestHandler):      
+            
+     def post(self):   
         day = days[day_id]
         bot = telepot.Bot(TOKEN) 
         if day_id == '1':
@@ -120,7 +121,7 @@ class BackMainHandler(tornado.web.RequestHandler):
 
 class MonPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_mon"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_query_argument("day_id", default=0))
+        self.render(pages["admin_page_mon"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.", day_id=self.get_argument("day_id", default=0))
 
 class TuePageHandler(tornado.web.RequestHandler):                   
      def post(self):   
