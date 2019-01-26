@@ -158,11 +158,7 @@ def make_app():
          (r"/fri_page", FriPageHandler),
          (r"/back", BackHandler),
          (r"/page_all_day", Page_all_dayHandler),
-         (r"/save_mon", SaveMonHandler),
-         (r"/save_tue", SaveTueHandler),
-         (r"/save_wed", SaveWedHandler),
-         (r"/save_thu", SaveThuHandler),
-         (r"/save_fri", SaveFriHandler),
+         (r"/save", SaveHandler),
          (r"/static/(.*)", tornado.web.StaticFileHandler, {"path": "./static"})],
     debug=True)
 
