@@ -63,7 +63,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
             y = y + 1       
         x=str(i+1)
         text = text  +  '  '+ x + '. ' + NewLesson[nlesson]
-        text_teacher = text_teacher '    '+ x + '. ' + NewLesson[nlesson]
+        text_teacher = text_teacher +  '    '+ x + '. ' + NewLesson[nlesson]
         i=i+1 
         nlesson = nlesson + 1
      chat_id = chat_id_mass[nclas]
