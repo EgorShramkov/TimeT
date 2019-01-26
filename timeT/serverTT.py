@@ -5,7 +5,7 @@ import tornado.web
 import os
 import re
 
-chat_id_teacher='-1001284124826'
+chat_id_teachers='-1001284124826'
 chat_id_5 = '-1001368635243'
 chat_id_6 = '-1001358437243'
 chat_id_7 = '-1001445027946'
