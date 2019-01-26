@@ -12,7 +12,7 @@ admin_password = "123456"
 port = 8888
 db_path = "./timetable.db"
 days= ['NON', 'понедельник' , 'вторник', 'среду', 'четверг', 'пятницу']
-NOM_mass = ['пятого','шестого','седьмого','восьмого','девятого','десятого','одиннадцатого']
+NOM_mass = ['5-ого','6-ого','7-ого','8-ого','9-oго','10-ого','11-ого']
 chat_id_mass = ['-1001368635243','-1001358437243','-1001445027946','-1001477729156','-1001364844389', '-1001208856454','-1001261650074']
 MAX_mass=[7,8,8,8,10,10,10]
 Monlesson =['1_5_1','2_5_1','3_5_1','4_5_1','5_5_1','6_5_1','7_5_1',
@@ -45,11 +45,12 @@ pages = {
 def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLesson, chat_id_teachers):
    nclas=0
    nlesson=0   
+   text_teacher = 'Изменное расписание на ' + day + '\n'
    for nclas in range(7):
      i=0
-     text_teacher = ''
      MAX = MAX_mass[nclas]     
      text = 'Измененное расписание для ' + NOM[nclas] +' класса на ' + day + ' \n'
+     text_teacher = 'Для ' + NOM[nclass] +  'класса: \n' 
      while i < MAX:
         lesson = self.get_argument(Lesson[nlesson])
         les = int(lesson)
@@ -61,12 +62,12 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
                y = 42
             y = y + 1       
         x=str(i+1)
-        text = text + x + '. ' + NewLesson[nlesson]   
+        text = text + x + '. ' + NewLesson[nlesson]
+        text_teacher = text_teacher + x + '. ' + NewLesson[nlesson]
         i=i+1 
         nlesson = nlesson + 1
      chat_id = chat_id_mass[nclas]
      bot.sendMessage(chat_id, text)
-     text_teacher = text_teacher + text
    bot.sendMessage(chat_id_teachers, text_teacher)
      
    return
