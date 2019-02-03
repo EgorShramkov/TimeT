@@ -12,7 +12,7 @@ admin_password = os.environ("Password")
 port = 8888
 db_path = "./timetable.db"
 days= ['NON', 'понедельник' , 'вторник', 'среду', 'четверг', 'пятницу']
-day_
+day_adm= ["NON", "понедельник" , "вторник", "среду", "четверг", "пятницу"]
 NOM_mass = ['5-ого','6-ого','7-ого','8-ого','9-oго','10-ого','11-ого']
 chat_id_mass = ['-1001368635243','-1001358437243','-1001445027946','-1001477729156','-1001364844389', '-1001208856454','-1001261650074']
 MAX_mass=[7,8,8,8,10,10,10]
@@ -128,10 +128,9 @@ class PageHandler(tornado.web.RequestHandler):
         day = self.get_argument("day_id", default=0)
         i=1
         for i in range(5):
+            k=str(i)
             if day==i:
-                self.render(pages["day_admin"], day = days[i]
-        self.render(pages["admin_page_mon"],day = "Понедельник", day_id = "1", admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
-
+                self.render(pages["day_admin"], day = day_adm[i], day_id = k)
 class TuePageHandler(tornado.web.RequestHandler):                   
      def post(self):   
         self.render(pages["admin_page_tue"],day = "Вторник", day_id = "2", admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
