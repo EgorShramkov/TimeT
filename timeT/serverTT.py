@@ -36,10 +36,6 @@ allLesson = ['Математика\n', 'Английский язык\n', 'Ру�
 pages = {
     "main_page": "./html/MAinEgor.html",
     "admin_page": "./html/day.html",
-    "admin_page_tue": "./html/day2.html",
-    "admin_page_wed": "./html/day3.html",
-    "admin_page_thu": "./html/day4.html",
-    "admin_page_fri": "./html/day5.html",
     "all_day": "./html/all_day.html"
 }
 
@@ -130,7 +126,7 @@ class PageHandler(tornado.web.RequestHandler):
         for i in range(5):
             k=str(i)
             if day==i:
-                self.render(pages["day_admin"], day = day_adm[i], day_id = k)
+                self.render(pages["admin_page"], day = day_adm[i], day_id = k)
 class TuePageHandler(tornado.web.RequestHandler):                   
      def post(self):   
         self.render(pages["admin_page_tue"],day = "Вторник", day_id = "2", admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
