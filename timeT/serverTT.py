@@ -8,10 +8,11 @@ import re
 chat_id_teachers='-1001284124826'
 
 TOKEN = '770819628:AAFoiGUAI3mrhwgTSwCc_Ps0WPigqhslDBI'
-admin_password = "123456"
+admin_password = os.environ("Password")
 port = 8888
 db_path = "./timetable.db"
 days= ['NON', 'понедельник' , 'вторник', 'среду', 'четверг', 'пятницу']
+day_
 NOM_mass = ['5-ого','6-ого','7-ого','8-ого','9-oго','10-ого','11-ого']
 chat_id_mass = ['-1001368635243','-1001358437243','-1001445027946','-1001477729156','-1001364844389', '-1001208856454','-1001261650074']
 MAX_mass=[7,8,8,8,10,10,10]
@@ -34,7 +35,7 @@ allLesson = ['Математика\n', 'Английский язык\n', 'Ру�
 
 pages = {
     "main_page": "./html/MAinEgor.html",
-    "admin_page_mon": "./html/day1.html",
+    "admin_page": "./html/day.html",
     "admin_page_tue": "./html/day2.html",
     "admin_page_wed": "./html/day3.html",
     "admin_page_thu": "./html/day4.html",
@@ -122,8 +123,13 @@ class BackMainHandler(tornado.web.RequestHandler):
      def post(self):   
         self.render(pages["main_page"], message="Спасибо за работу.")                
 
-class MonPageHandler(tornado.web.RequestHandler):                   
-     def post(self):   
+class PageHandler(tornado.web.RequestHandler):                   
+     def post(self): 
+        day = self.get_argument("day_id", default=0)
+        i=1
+        for i in range(5):
+            if day==i:
+                self.render(pages["day_admin"], day = days[i]
         self.render(pages["admin_page_mon"],day = "Понедельник", day_id = "1", admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
 
 class TuePageHandler(tornado.web.RequestHandler):                   
