@@ -8,7 +8,7 @@ import re
 chat_id_teachers='-1001284124826'
 
 TOKEN = '770819628:AAFoiGUAI3mrhwgTSwCc_Ps0WPigqhslDBI'
-admin_password = os.environ("Password")
+admin_password = os.environ('Password')
 port = 8888
 db_path = "./timetable.db"
 days= ['NON', 'понедельник' , 'вторник', 'среду', 'четверг', 'пятницу']
