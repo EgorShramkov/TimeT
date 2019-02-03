@@ -156,11 +156,7 @@ def make_app():
     return tornado.web.Application([
          (r"/back_main", BackMainHandler),
          (r"/", MainHandler),
-         (r"/mon_page", MonPageHandler),
-         (r"/tue_page", TuePageHandler),
-         (r"/wed_page", WedPageHandler),
-         (r"/thu_page", ThuPageHandler),
-         (r"/fri_page", FriPageHandler),
+         (r"/page", PageHandler),
          (r"/back", BackHandler),
          (r"/page_all_day", Page_all_dayHandler),
          (r"/save", SaveHandler),
