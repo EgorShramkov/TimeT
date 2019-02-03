@@ -124,11 +124,11 @@ class BackMainHandler(tornado.web.RequestHandler):
 
 class MonPageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_mon"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+        self.render(pages["admin_page_mon"],day = "Понедельник", day_id = "1", admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
 
 class TuePageHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["admin_page_tue"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+        self.render(pages["admin_page_tue"],day = "Вторник", day_id = "2", admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
 
 
 class WedPageHandler(tornado.web.RequestHandler):                   
