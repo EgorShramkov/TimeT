@@ -5,12 +5,12 @@ import tornado.web
 import os
 import re
 
-admin_password = os.environ('Password')
+admin_password = 'Password' in os.environ
 chat_id_teachers='-1001284124826'
 options = json.load(open('options.json', 'r'))
 subjects = json.load(open('subjects.json', 'r'))
 days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
-TOKEN = os.environ('TOKEN')
+TOKEN = 'TOKEN' in os.environ
 port = 8888
 day_adm= ["NON", "понедельник" , "вторник", "среду", "четверг", "пятницу"]
 NOM_mass = ['5-ого','6-ого','7-ого','8-ого','9-oго','10-ого','11-ого']
