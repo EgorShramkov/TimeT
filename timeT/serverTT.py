@@ -140,7 +140,7 @@ def make_app():
          (r"/page", PageHandler),
          (r"/back", BackHandler),
          (r"/page_all_day", Page_all_dayHandler),
-         (r"/save", SaveHandler),
+         (r"/sent", SentHandler),
          (r"/static/(.*)", tornado.web.StaticFileHandler, {"path": "./static"})],
     debug=True)
 
