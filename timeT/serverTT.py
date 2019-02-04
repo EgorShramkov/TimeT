@@ -5,17 +5,16 @@ import tornado.web
 import os
 import re
 
-chat_id_teachers='-1001284124826'
-
-TOKEN = '770819628:AAFoiGUAI3mrhwgTSwCc_Ps0WPigqhslDBI'
 admin_password = os.environ('Password')
+chat_id_teachers='-1001284124826'
+options = json.load(open('options.json', 'r'))
+subjects = json.load(open('subjects.json', 'r'))
+days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
+TOKEN = '770819628:AAFoiGUAI3mrhwgTSwCc_Ps0WPigqhslDBI'
 port = 8888
-db_path = "./timetable.db"
-days= ['NON', 'понедельник' , 'вторник', 'среду', 'четверг', 'пятницу']
 day_adm= ["NON", "понедельник" , "вторник", "среду", "четверг", "пятницу"]
 NOM_mass = ['5-ого','6-ого','7-ого','8-ого','9-oго','10-ого','11-ого']
 chat_id_mass = ['-1001368635243','-1001358437243','-1001445027946','-1001477729156','-1001364844389', '-1001208856454','-1001261650074']
-MAX_mass=[7,8,8,8,10,10,10]
 Monlesson =['1_5_1','2_5_1','3_5_1','4_5_1','5_5_1','6_5_1','7_5_1',
 '1_6_1','2_6_1','3_6_1','4_6_1','5_6_1','6_6_1','7_6_1', '8_6_1','1_7_1','2_7_1','3_7_1','4_7_1','5_7_1','6_7_1','7_7_1', '8_7_1','1_8_1','2_8_1','3_8_1','4_8_1','5_8_1','6_8_1','7_8_1', '8_8_1','1_9_1','2_9_1','3_9_1','4_9_1','5_9_1','6_9_1','7_9_1', '8_9_1', '9_9_1','10_9_1','1_10_1','2_10_1','3_10_1','4_10_1','5_10_1','6_10_1','7_10_1', '8_10_1','9_10_1','10_10_1', '1_11_1','2_11_1','3_11_1','4_11_1','5_11_1','6_11_1','7_11_1', '8_11_1', '9_11_1', '10_11_1']          
 Tuelesson =['1_5_2','2_5_2','3_5_2','4_5_2','5_5_2','6_5_2','7_5_2',
@@ -122,34 +121,16 @@ class BackMainHandler(tornado.web.RequestHandler):
 class PageHandler(tornado.web.RequestHandler):                   
      def post(self): 
         day = self.get_argument("day_id", default=0)
-        i=1
-        for i in range(5):
-            k=str(i)
-            if day==i:
-                self.render(pages["admin_page"], day = day_adm[i], day_id = k)
-class TuePageHandler(tornado.web.RequestHandler):                   
-     def post(self):   
-        self.render(pages["admin_page_tue"],day = "Вторник", day_id = "2", admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
+        defaults = json.load(open('defaults.json', 'r'))
+        template = {
+            'days':days,
+            'day': day,
+            'subjects': subjects,
+            'defaults' : defaults,
+            'options' : options
+        }
+        self.render('index.html', **template)
 
-
-class WedPageHandler(tornado.web.RequestHandler):                   
-     def post(self):   
-        self.render(pages["admin_page_wed"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
-
-
-class ThuPageHandler(tornado.web.RequestHandler):                   
-     def post(self):   
-        self.render(pages["admin_page_thu"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
-
-
-class FriPageHandler(tornado.web.RequestHandler):                   
-     def post(self):   
-        self.render(pages["admin_page_fri"], admin_message="Можете вносить изменения. Не забудьте нажать кнопку 'отправить'.")
-
-
-
-
-        
         
 
 def make_app():
