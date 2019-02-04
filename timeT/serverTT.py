@@ -8,7 +8,7 @@ import re
 
 admin_password = 'Password' in os.environ
 chat_id_teachers='-1001284124826'
-options = json.load(open('EgorShramkov/TimeT/timeT/json/options.json', 'r'))
+options = json.load(open('EgorShramkov/TimeT/timeT/options.json', 'r'))
 subjects = json.load(open('./json/subjects.json', 'r'))
 days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
 TOKEN = 'TOKEN' in os.environ
