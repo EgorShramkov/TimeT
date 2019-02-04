@@ -8,8 +8,8 @@ import re
 
 admin_password = 'Password' in os.environ
 chat_id_teachers='-1001284124826'
-options = json.load(open('options.json', 'r'))
-subjects = json.load(open('subjects.json', 'r'))
+options = json.load(open('/options.json', 'r'))
+subjects = json.load(open('/subjects.json', 'r'))
 days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
 TOKEN = 'TOKEN' in os.environ
 port = 8888
@@ -122,7 +122,7 @@ class BackMainHandler(tornado.web.RequestHandler):
 class PageHandler(tornado.web.RequestHandler):                   
      def post(self): 
         day = self.get_argument("day_id", default=0)
-        defaults = json.load(open('defaults.json', 'r'))
+        defaults = json.load(open('/defaults.json', 'r'))
         template = {
             'days':days,
             'day': day,
