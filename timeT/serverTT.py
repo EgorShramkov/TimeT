@@ -65,7 +65,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
                NewLesson[nlesson] = allLesson[y]
                y = 42
             y = y + 1    
-        if NewLesson[nlesson] != defaults[nlesson]:
+        if NewLesson[nlesson] =! defaults[nlesson]:
             otvet= 1
             teacher_otvet= 1
         x=str(i+1)
