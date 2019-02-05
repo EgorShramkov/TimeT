@@ -6,12 +6,15 @@ import os
 import json
 import re
 
-admin_password = 'Password' in os.environ
+absolute_path = os.path.dirname(os.path.adspath(_file_))
+options_path = absolute_path + 'options.json'
+subjects_path = absolute_path + 'subjects.json'
+admin_password =  os.getenv('Password')
+TOKEN = os.getenv('TOKEN')
 chat_id_teachers='-1001284124826'
-options = json.load(open(r'EgorShramkov/TimeT/timeT/options.json', 'r'))
-subjects = json.load(open('./json/subjects.json', 'r'))
+options = json.load(open('options_path', 'r'))
+subjects = json.load(open('subjects_path', 'r'))
 days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
-TOKEN = 'TOKEN' in os.environ
 port = 8888
 day_adm= ["NON", "понедельник" , "вторник", "среду", "четверг", "пятницу"]
 NOM_mass = ['5-ого','6-ого','7-ого','8-ого','9-oго','10-ого','11-ого']
