@@ -7,8 +7,8 @@ import json
 import re
 
 absolute_path = os.path.dirname(os.path.abspath(__file__))
-options_path = absolute_path + 'options.json'
-subjects_path = absolute_path + 'subjects.json'
+options_path = absolute_path + '/options.json'
+subjects_path = absolute_path + '/subjects.json'
 admin_password =  os.getenv('Password')
 TOKEN = os.getenv('TOKEN')
 chat_id_teachers='-1001284124826'
@@ -122,7 +122,7 @@ class BackMainHandler(tornado.web.RequestHandler):
 
 class PageHandler(tornado.web.RequestHandler):                   
      def post(self): 
-        defaults_path = absolute_path + 'defaults.json'
+        defaults_path = absolute_path + '/defaults.json'
         day = self.get_argument("day_id", default=0)
         defaults = json.load(open(defaults_path, 'r'))
         template = {
