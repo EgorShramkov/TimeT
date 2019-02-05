@@ -87,7 +87,7 @@ class Page_all_dayHandler(tornado.web.RequestHandler):
             self.render(pages["all_day"], message="Выберети, пожалуйста, день в который будут вноситься изменения.")
 
 
-class SaveHandler(tornado.web.RequestHandler):      
+class SentHandler(tornado.web.RequestHandler):      
             
      def post(self):  
         day_id_str = self.get_argument("day_id", default=0)
