@@ -31,4 +31,126 @@ Frilesson =['1_5_5','2_5_5','3_5_5','4_5_5','5_5_5','6_5_5','7_5_5',
 '1_6_5','2_6_5','3_6_5','4_6_5','5_6_5','6_6_5','7_6_5', '8_6_5','1_7_5','2_7_5','3_7_5','4_7_5','5_7_5','6_7_5','7_7_5', '8_7_5','1_8_5','2_8_5','3_8_5','4_8_5','5_8_5','6_8_5','7_8_5', '8_8_5','1_9_5','2_9_5','3_9_5','4_9_5','5_9_5','6_9_5','7_9_5', '8_9_5', '9_9_5','10_9_5','1_10_5','2_10_5','3_10_5','4_10_5','5_10_5','6_10_5','7_10_5', '8_10_5','9_10_5','10_10_5', '1_11_5','2_11_5','3_11_5','4_11_5','5_11_5','6_11_5','7_11_5', '8_11_5', '9_11_5', '10_11_5']          
 NewLesson = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',
 '','','','','','','', '', '', '','','','','','','','','', '', '','','','','','','','','', '', '']
-allLesson = ['Математика\n', 'Английский язык\n', 'Русский язык\n', 'География\n', 'Информатика\n', 'История\n', 'Обществознание\n', 'Литература\n', 'Физкультура\n', 'Биология\n', 'Второй иностранный\n', 'Английский язык\n', '"-"\n', 'Риторика\n' , 'Алгебра Р/Б \n', 'Геометрия Р/Б\n' , 'ОГЭ Био/Ист/Англ\n', 'ОГЭ Мат1/Мат2\n', 'ОГЭ Общ\n', 'ОГЭ география/инф\n', 'ОГЭ русский\n', 'Геом Р/История Р/Лит-ра Р/Био Р\n' , 'Геом Р/Биология Р\n' , 'Общ(экон)/ русский ЕГЭ\n',  'Обществознание Р\n', 'Алгебра Р/ Геометрия Б\n', 'Алг Р/ Ист Р/ Лит Р/ Хим Р\n', 'Инф Р/Физ-ра\n', 'Алгебра Б/Ф
+allLesson = ['Математика\n', 'Английский язык\n', 'Русский язык\n', 'География\n', 'Информатика\n', 'История\n', 'Обществознание\n', 'Литература\n', 'Физкультура\n', 'Биология\n', 'Второй иностранный\n', 'Английский язык\n', '"-"\n', 'Риторика\n' , 'Алгебра Р/Б \n', 'Геометрия Р/Б\n' , 'ОГЭ Био/Ист/Англ\n', 'ОГЭ Мат1/Мат2\n', 'ОГЭ Общ\n', 'ОГЭ география/инф\n', 'ОГЭ русский\n', 'Геом Р/История Р/Лит-ра Р/Био Р\n' , 'Геом Р/Биология Р\n' , 'Общ(экон)/ русский ЕГЭ\n',  'Обществознание Р\n', 'Алгебра Р/ Геометрия Б\n', 'Алг Р/ Ист Р/ Лит Р/ Хим Р\n', 'Инф Р/Физ-ра\n', 'Алгебра Б/Франц Р/Инф Р\n', 'Геом Р/ История Р/ Литература р\n', 'Алг Р/ Фин гр/ Общ Р\n' , 'История Р/Б\n', 'Общество Р/Б\n','Алг Р/История Р\n', 'Алг Р/Лит Р/Олимп История\n' , 'Алг Б/ Инф Р\n'  
+, 'Геом Б/ Инф Б/ Франц Р\n', 'Алгебра Р/Литература Р\n' , 'Алгебра Р/ История Р\n', 'Общ Р/Био Р/Физ-ра\n' ,'Литература/ Физ-ра\n', 'Физика\n', 'Химия\n', 'Алгебра Р/ Алгебра Б \n']  
+
+pages = {
+    "main_page": "./html/MAinEgor.html",
+    "admin_page": "./html/day.html",
+    "all_day": "./html/all_day.html"
+}
+
+def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLesson, chat_id_teachers):
+   nclas=0
+   nlesson=0   
+   text_teacher = 'Изменное расписание на ' + day + '\n'
+   for nclas in range(7):
+     i=0
+     MAX = MAX_mass[nclas]     
+     text ='Измененное расписание для ' + NOM[nclas] +' класса на ' + day + ' \n'
+     text_teacher =text_teacher +  '  ' +  'Для ' + NOM[nclas] +  'класса: \n' 
+     while i < MAX:
+        lesson = self.get_argument(Lesson[nlesson])
+        les = int(lesson)
+        les = les - 1
+        y=0
+        while y < 44:
+            if les == y:
+               NewLesson[nlesson] = allLesson[y]
+               y = 42
+            y = y + 1       
+        x=str(i+1)
+        text = text  +  '  '+ x + '. ' + NewLesson[nlesson]
+        text_teacher = text_teacher +  '    '+ x + '. ' + NewLesson[nlesson]
+        i=i+1 
+        nlesson = nlesson + 1
+     chat_id = chat_id_mass[nclas]
+     bot.sendMessage(chat_id, text)
+   bot.sendMessage(chat_id_teachers, text_teacher)
+     
+   return
+
+
+
+class MainHandler(tornado.web.RequestHandler):
+     def get(self):
+        self.render(pages["main_page"], message="Доброго времени суток")
+ 
+
+
+class Page_all_dayHandler(tornado.web.RequestHandler):
+     def post(self):
+        password = self.get_argument("password", None)
+        if not password == admin_password:
+            self.render(pages["main_page"], message="Неверный пароль, попробуйте, пожалуйста, ещё раз.")
+        elif  password == admin_password: 
+            self.render(pages["all_day"], message="Выберети, пожалуйста, день в который будут вноситься изменения.")
+
+
+class SaveHandler(tornado.web.RequestHandler):      
+            
+     def post(self):  
+        day_id_str = self.get_argument("day_id", default=0)
+        day_id = int(day_id_str)
+        day = days[day_id]
+        bot = telepot.Bot(TOKEN) 
+        if day_id == 0:
+            self.render(pages["all_day"], message="Ошибка.Пишите Егору.")
+        if day_id == 1:
+            save_send(bot,self,NewLesson,Monlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson, chat_id_teachers);
+            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+        if day_id == 2:
+            save_send(bot,self,NewLesson,Tuelesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
+            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+        if day_id == 3:
+            save_send(bot,self,NewLesson,Wedlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
+            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+        if day_id == 4:
+            save_send(bot,self,NewLesson,Thulesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
+            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+        if day_id == 5:   
+            save_send(bot,self,NewLesson,Frilesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson,  chat_id_teachers);        
+            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+
+class BackHandler(tornado.web.RequestHandler):                   
+     def post(self):   
+        self.render(pages["all_day"], message="Спасибо за работу.")
+
+class BackMainHandler(tornado.web.RequestHandler):                   
+     def post(self):   
+        self.render(pages["main_page"], message="Спасибо за работу.")                
+
+class PageHandler(tornado.web.RequestHandler):                   
+     def post(self): 
+        day = self.get_argument("day_id", default=0)
+        defaults = json.load(open('./json/defaults.json', 'r'))
+        template = {
+            'days':days,
+            'day': day,
+            'subjects': subjects,
+            'defaults' : defaults,
+            'options' : options
+        }
+        self.render('index.html', **template)
+
+        
+
+def make_app():
+    return tornado.web.Application([
+         (r"/back_main", BackMainHandler),
+         (r"/", MainHandler),
+         (r"/page", PageHandler),
+         (r"/back", BackHandler),
+         (r"/page_all_day", Page_all_dayHandler),
+         (r"/sent", SentHandler),
+         (r"/static/(.*)", tornado.web.StaticFileHandler, {"path": "./static"})],
+    debug=True)
+
+
+tornado_app = make_app()
+
+
+if __name__ == "__main__":
+    app = make_app()  # Создаем серверное приложение
+    app.listen(port)  # Даем приложению сетевой порт для работы
+    tornado.ioloop.IOLoop.current().start()  # Запускаем приложение
