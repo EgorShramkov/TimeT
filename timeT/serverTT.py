@@ -136,7 +136,7 @@ class BackMainHandler(tornado.web.RequestHandler):
 class PageHandler(tornado.web.RequestHandler):                   
      def post(self): 
         defaults_path = absolute_path + '/defaults.json'
-        day = self.get_argument("day_id", default=0)
+        day = self.get_argument("day_id", 4)
         defaults = json.load(open(defaults_path, 'r'))
         template = {
             'days':days,
