@@ -6,7 +6,7 @@ import os
 import json
 import re
 
-absolute_path = os.path.dirname(os.path.adspath(_file_))
+absolute_path = os.path.dirname(os.path.abspath(_file_))
 options_path = absolute_path + 'options.json'
 subjects_path = absolute_path + 'subjects.json'
 admin_password =  os.getenv('Password')
