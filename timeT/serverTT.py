@@ -78,7 +78,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
      if ovet == 1:
        chat_id= chat_id_mass[nclas]
        bot.sendMessage(chat_id, text)
-   if teacher_otvet  = 1
+   if teacher_otvet  == 1:
      bot.sendMessage(chat_id_teachers, text_teacher)
      
    return
