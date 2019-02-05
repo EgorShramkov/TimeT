@@ -41,7 +41,7 @@ pages = {
 }
 
 
-def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLesson, chat_id_teachers):
+def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, chat_id_teachers):
    nclas=0
    teacher_otvet = 0
    defaults_path = absolute_path + '/defaults.json'
@@ -54,7 +54,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
    for nclas in range(7):
      otvet = 0
      i=0
-     MAX = 10     
+     MAX_mass = 10     
      text ='Измененное расписание для ' + NOM[nclas] +' класса на ' + day + ' \n'
      text_teacher =text_teacher +  '  ' +  'Для ' + NOM[nclas] +  'класса: \n' 
      while i < MAX:
@@ -108,21 +108,22 @@ class SentHandler(tornado.web.RequestHandler):
         day = days[day_id]
         bot = telepot.Bot(TOKEN) 
         if day_id == 0:
+            
             self.render(pages["all_day"], message="Ошибка.Пишите Егору.")
         if day_id == 1:
-            save_send(bot,self,NewLesson,Monlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson, chat_id_teachers);
+            save_send(bot,self,NewLesson,Monlesson,NOM_mass,chat_id_mass,day,allLesson, chat_id_teachers);
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
         if day_id == 2:
-            save_send(bot,self,NewLesson,Tuelesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
+            save_send(bot,self,NewLesson,Tuelesson,NOM_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
         if day_id == 3:
-            save_send(bot,self,NewLesson,Wedlesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
+            save_send(bot,self,NewLesson,Wedlesson,NOM_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
         if day_id == 4:
-            save_send(bot,self,NewLesson,Thulesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
+            save_send(bot,self,NewLesson,Thulesson,NOM_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
         if day_id == 5:   
-            save_send(bot,self,NewLesson,Frilesson,NOM_mass,MAX_mass,chat_id_mass,day,allLesson,  chat_id_teachers);        
+            save_send(bot,self,NewLesson,Frilesson,NOM_mass,chat_id_mass,day,allLesson,  chat_id_teachers);        
             self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
 
 class BackHandler(tornado.web.RequestHandler):                   
