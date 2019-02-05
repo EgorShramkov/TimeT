@@ -44,10 +44,10 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
    RED = '\033[91m'
    UNDERLINE = '\033[4m'
    BOLD = '\033[1m' 
-   nlesson=0   
+   nlesson=0    
+   otvet = 0
    text_teacher = 'Изменное расписание на ' + day + '\n'
    for nclas in range(7):
-     otvet = 0
      i=0
      MAX= 10     
      text ='Измененное расписание для ' + NOM[nclas] +' класса на ' + day + ' \n'
@@ -62,7 +62,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
                NewLesson[nlesson] = allLesson[y]
                y = 42
             y = y + 1    
-        if NewLesson[nlesson] != defaults[Lesson[nlesson]]:
+        if NewLesson[nlesson] != subjects[defaults[Lesson[nlesson]]]:
             otvet= 1
             teacher_otvet= 1
         x=str(i+1)
@@ -72,6 +72,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
         if otvet == 1:
             text = text  +  '  '+ x + '. ' + '\033[91m' + '\033[4m' + '\033[1m'  + NewLesson[nlesson] + '\033[0m'
             text_teacher = text_teacher +  '    '+ x + '. ' + '\033[91m' + '\033[4m' + '\033[1m'  + NewLesson[nlesson]  + '\033[0m'  
+            otvet = 0
         i=i+1 
         nlesson = nlesson + 1
      if otvet == 1:
