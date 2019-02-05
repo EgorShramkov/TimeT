@@ -40,8 +40,12 @@ pages = {
     "all_day": "./html/all_day.html"
 }
 
+
 def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLesson, chat_id_teachers):
    nclas=0
+   RED = '\033[91m'
+   UNDERLINE = '\033[4m'
+   BOLD = '\033[1m' 
    nlesson=0   
    text_teacher = 'Изменное расписание на ' + day + '\n'
    for nclas in range(7):
