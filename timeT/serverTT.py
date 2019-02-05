@@ -43,12 +43,16 @@ pages = {
 
 def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLesson, chat_id_teachers):
    nclas=0
+   teacher_otvet = 0
+   defaults_path = absolute_path + '/defaults.json'
+   defaults = json.load(open(defaults_path, 'r'))
    RED = '\033[91m'
    UNDERLINE = '\033[4m'
    BOLD = '\033[1m' 
    nlesson=0   
    text_teacher = 'Изменное расписание на ' + day + '\n'
    for nclas in range(7):
+     otvet = 0
      i=0
      MAX = 10     
      text ='Измененное расписание для ' + NOM[nclas] +' класса на ' + day + ' \n'
@@ -62,15 +66,20 @@ def save_send(bot, self,NewLesson,Lesson, NOM, MAX_mass,chat_id_mass, day, allLe
             if les == y:
                NewLesson[nlesson] = allLesson[y]
                y = 42
-            y = y + 1       
+            y = y + 1    
+        if NewLesson[nlesson] != defaults[nlesson]:
+            otvet= 1
+            teacher_otvet= 1
         x=str(i+1)
         text = text  +  '  '+ x + '. ' + NewLesson[nlesson]
         text_teacher = text_teacher +  '    '+ x + '. ' + NewLesson[nlesson]
         i=i+1 
         nlesson = nlesson + 1
-     chat_id = chat_id_mass[nclas]
-     bot.sendMessage(chat_id, text)
-   bot.sendMessage(chat_id_teachers, text_teacher)
+     if ovet == 1:
+       chat_id= chat_id_mass[nclas]
+       bot.sendMessage(chat_id, text)
+   if teacher_otvet  = 1
+     bot.sendMessage(chat_id_teachers, text_teacher)
      
    return
 
