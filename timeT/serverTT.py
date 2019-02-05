@@ -69,12 +69,12 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
             text = text  +  '  '+ x + '. ' + NewLesson[nlesson]
             text_teacher = text_teacher +  '    '+ x + '. ' + NewLesson[nlesson]
         if otvet == 1:
-            text = text  +  '  '+ x + '. ' + '\033[91m' + '\033[4m' + '\033[1m'  + NewLesson[nlesson] + '\033[0m'
-            text_teacher = text_teacher +  '    '+ x + '. ' + '\033[91m' + '\033[4m' + '\033[1m'  + NewLesson[nlesson]  + '\033[0m'  
-            otvet = 0
+            text = text  +  '  '+ x + '. '   + NewLesson[nlesson]
+            text_teacher = text_teacher +  '    '+ x + '. ' +  NewLesson[nlesson]  
         i=i+1 
         nlesson = nlesson + 1
      if otvet == 1:
+       otvet = 0
        chat_id= chat_id_mass[nclas]
        bot.sendMessage(chat_id, text)
    if teacher_otvet  == 1:
