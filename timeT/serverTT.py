@@ -132,7 +132,7 @@ class PageHandler(tornado.web.RequestHandler):
             'defaults' : defaults,
             'options' : options
         }
-        self.render(pages[admin_page], **template)
+        self.render(pages["admin_page"], **template)
 
         
 
