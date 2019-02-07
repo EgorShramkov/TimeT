@@ -66,8 +66,8 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
             teacher_otvet= 1
         x=str(i+1)
         if ok == 0:
-            text = text  +  '  '+ x + '. ' + NewLesson[nlesson]
-            text_teacher = text_teacher +  '    '+ x + '. ' + NewLesson[nlesson] 
+            text = text  +  '  '+ x + '. ' + NewLesson[nlesson]+'\n'
+            text_teacher = text_teacher +  '    '+ x + '. ' + NewLesson[nlesson]+'\n' 
         if ok == 1:
             text = text  +  '  *'+ x + '. '   + '__'+NewLesson[nlesson]+'__'+'\n'
             text_teacher = text_teacher +  '    *'+ x + '. ' +  '__'+NewLesson[nlesson]+'__'+'\n'
