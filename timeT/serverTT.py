@@ -54,6 +54,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
         lesson = self.get_argument(Lesson[nlesson])
         les = int(lesson)
         y=0
+        ok=0
         while y < 44:
             if les == y:
                NewLesson[nlesson] = allLesson[y]
@@ -61,14 +62,16 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
             y = y + 1    
         if NewLesson[nlesson] != subjects[defaults[Lesson[nlesson]]]:
             otvet= 1
+            ok=1
             teacher_otvet= 1
         x=str(i+1)
-        if otvet == 0:
+        if ok == 0:
             text = text  +  '  '+ x + '. ' + NewLesson[nlesson]
             text_teacher = text_teacher +  '    '+ x + '. ' + NewLesson[nlesson] 
-        if otvet == 1:
-            text = text  +  '  '+ x + '. '   + '**'+NewLesson[nlesson]+'**'
-            text_teacher = text_teacher +  '    '+ x + '. ' +  '**'+NewLesson[nlesson]+'**'
+        if ok == 1:
+            text = text  +  '  *'+ x + '. '   + '__'+NewLesson[nlesson]+'__'
+            text_teacher = text_teacher +  '    *'+ x + '. ' +  '__'+NewLesson[nlesson]+'__'
+            ok=0
         i=i+1 
         nlesson = nlesson + 1
      if otvet == 1:
