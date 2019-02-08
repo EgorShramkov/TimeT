@@ -1,0 +1,29 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Меню для изменения расписания на четверть</title>
+  <link rel="stylesheet" href="/static/styles1.css" />
+ </head>
+ <body>
+   {{message}}
+                <form action="/mon_page" method="POST">
+			<input class="clickable" type="submit" placeholder="Поненедельник" value="Поненедельник" />
+		</form>
+                <form action="/tue_page" method="POST">
+			<input class="clickable" type="submit" placeholder="Вторник" value="Вторник" />
+		</form>
+                <form action="/wed_page" method="POST">
+			<input class="clickable" type="submit" placeholder="Среда" value="Среда" />
+		</form>
+                <form action="/thu_page" method="POST">
+			<input class="clickable" type="submit" placeholder="Четверг" value="Четверг" />
+		</form>
+                <form action="/fri_page" method="POST">
+			<input class="clickable" type="submit" placeholder="Пятница" value="Пятница" />
+		</form>
+                <form action="/back" method="POST">
+			<input class="clickable" type="submit" placeholder="Выход" value="Выход" />
+		</form>
+ </body>
+</html>
+                
