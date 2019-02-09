@@ -91,6 +91,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
 
 class MainHandler(tornado.web.RequestHandler):
      def get(self):
+        r = redis.from_url(os.environ.get("REDIS_URL"))
         self.render(pages["main_page"], message="Доброго времени суток")
         r.set('1_5_1', '2')
         r.set('1_5_2', '3')
