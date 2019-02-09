@@ -170,7 +170,7 @@ class MainHandler(tornado.web.RequestHandler):
         r.set('2_5_6', '1')
         r.set('2_5_7', '1')
         r.set('2_5_8', '1')
-	r.set('2_5_9', '1')
+        r.set('2_5_9', '1')
         r.set('2_5_10', '1')
         r.set('2_6_1', '1')
         r.set('2_6_2', '1')
