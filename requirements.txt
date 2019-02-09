@@ -1,4 +1,4 @@
 gunicorn==19.9.0
 telepot==12.7
 tornado==5.1.1
-redis==18.1
+redis==3.1.0
