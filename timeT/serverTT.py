@@ -33,7 +33,7 @@ pages = {
     "all_day_save": "./html/all_day_save.html", 
     "main_page": "./html/MAinEgor.html",
     "admin_page": "./html/day.html",
-    "all_day": "./html/all_day.html"
+    "allday": "./html/allday.html"
 }
 
 
@@ -100,13 +100,13 @@ class Page_allday_saveHandler(tornado.web.RequestHandler):
         self.render(pages["all_day_save.html"], message="Выберети, пожалуйста, день в который будут вноситься изменения.")
         
 
-class Page_all_dayHandler(tornado.web.RequestHandler):
+class PagealldayHandler(tornado.web.RequestHandler):
      def post(self):
         password = self.get_argument("password", None)
         if not password == admin_password:
             self.render(pages["main_page"], message="Неверный пароль, попробуйте, пожалуйста, ещё раз.")
         elif  password == admin_password: 
-            self.render(pages["all_day"], message="Выберети, пожалуйста, день в который будут вноситься изменения.")
+            self.render(pages["allday"], message="Выберети, пожалуйста, день в который будут вноситься изменения.")
 
 
 class SentHandler(tornado.web.RequestHandler):      
@@ -118,26 +118,26 @@ class SentHandler(tornado.web.RequestHandler):
         bot = telepot.Bot(TOKEN) 
         if day_id == 0:
             
-            self.render(pages["all_day"], message="Ошибка.Пишите Егору.")
+            self.render(pages["allday"], message="Ошибка.Пишите Егору.")
         if day_id == 1:
             save_send(bot,self,NewLesson,Monlesson,NOM_mass,chat_id_mass,day,allLesson, chat_id_teachers);
-            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
         if day_id == 2:
             save_send(bot,self,NewLesson,Tuelesson,NOM_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
-            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
         if day_id == 3:
             save_send(bot,self,NewLesson,Wedlesson,NOM_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
-            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
         if day_id == 4:
             save_send(bot,self,NewLesson,Thulesson,NOM_mass,chat_id_mass,day,allLesson,  chat_id_teachers);
-            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
         if day_id == 5:   
             save_send(bot,self,NewLesson,Frilesson,NOM_mass,chat_id_mass,day,allLesson,  chat_id_teachers);        
-            self.render(pages["all_day"], message="Спасибо за работу, изменения внесены.")
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
 
 class BackHandler(tornado.web.RequestHandler):                   
      def post(self):   
-        self.render(pages["all_day"], message="Спасибо за работу.")
+        self.render(pages["allday"], message="Спасибо за работу.")
 
 class BackMainHandler(tornado.web.RequestHandler):                   
      def post(self):   
@@ -166,7 +166,7 @@ def make_app():
          (r"/", MainHandler),
          (r"/page", PageHandler),
          (r"/back", BackHandler),
-         (r"/page_all_day", Page_all_dayHandler),
+         (r"/page_all_day", PagealldayHandler),
          (r"/sent", SentHandler),
          (r"/page_allday_save", Page_allday_saveHandler), 
          (r"/static/(.*)", tornado.web.StaticFileHandler, {"path": "./static"})],
