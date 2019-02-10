@@ -95,9 +95,9 @@ class MainHandler(tornado.web.RequestHandler):
         r.hset('1_5_1', 4)
         r.hset('1_5_2', 4)
         r.hset('1_5_3', 4)
-        y = r.get('1_5_1')
-        z = r.get('1_5_2')
-        d = r.get('1_5_3')
+        y = r.hget('1_5_1')
+        z = r.hget('1_5_2')
+        d = r.hget('1_5_3')
         otvet = y + z + d
         self.render(pages["main_page"], message=otvet)
 
