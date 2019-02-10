@@ -30,6 +30,7 @@ NewLesson = ['','','','','','','','','','','','','','','','','','','','','','','
 '','','','','','','', '', '', '','','','','','','','','', '', '','','','','','','','','', '', '']
 allLesson = ["Математика", "Английский язык", "Русский язык", "География", "Информатика", "История", "Обществознание", "Литература", "Физкультура", "Биология", "Второй иностранный", "Английский язык", "'-'", "Риторика" , "Алгебра Р/Б ", "Геометрия Р/Б" , "ОГЭ Био/Ист/Англ", "ОГЭ Мат1/Мат2", "ОГЭ Общ", "ОГЭ география/инф", "ОГЭ русский", "Геом Р/История Р/Лит-ра Р/Био Р" , "Геом Р/Биология Р" , "Общ(экон)/ русский ЕГЭ",  "Обществознание Р", "Алгебра Р/ Геометрия Б", "Алг Р/ Ист Р/ Лит Р/ Хим Р", "Инф Р/Физ-ра", "Алгебра Б/Франц Р/Инф Р", "Геом Р/ История Р/ Литература р", "Алг Р/ Фин гр/ Общ Р" , "История Р/Б", "Общество Р/Б","Алг Р/История Р", "Алг Р/Лит Р/Олимп История" , "Алг Б/ Инф Р"  , "Геом Б/ Инф Б/ Франц Р", "Алгебра Р/Литература Р" , "Алгебра Р/ История Р", "Общ Р/Био Р/Физ-ра" ,"Литература/ Физ-ра", "Физика", "Химия", "Алгебра Р/ Алгебра Б ", "Алгебра", "Геометрия"] 
 pages = {
+    "admin_page_save": "./html/day_save.html",
     "all_day_save": "./html/all_day_save.html", 
     "main_page": "./html/MAinEgor.html",
     "admin_page": "./html/day.html",
@@ -493,6 +494,23 @@ class BackMainHandler(tornado.web.RequestHandler):
      def post(self):   
         self.render(pages["main_page"], message="Спасибо за работу.")                
 
+        
+class PageSaveHandler(tornado.web.RequestHandler):                   
+     def post(self): 
+        default = redis.from_url(os.environ.get("REDIS_URL"))
+        day_str = self.get_argument("day_id")
+        day = int(day_str)
+        template = {
+            'days':days,
+            'day': day,
+            'subjects': subjects,
+            'defaults' : default,
+            'options' : options
+        }
+        self.render(pages["admin_page_save"], **template)
+
+        
+        
 class PageHandler(tornado.web.RequestHandler):                   
      def post(self): 
         default = redis.from_url(os.environ.get("REDIS_URL"))
@@ -515,6 +533,7 @@ def make_app():
          (r"/", MainHandler),
          (r"/page", PageHandler),
          (r"/back", BackHandler),
+         (r"/page_save", PageSaveHandler),
          (r"/page_all_day", PagealldayHandler),
          (r"/sent", SentHandler),
          (r"/page_allday_save", Page_allday_saveHandler), 
