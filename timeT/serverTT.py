@@ -119,13 +119,7 @@ class SaveHandler(tornado.web.RequestHandler):
     
 class MainHandler(tornado.web.RequestHandler):
      def get(self):
-        r.set('1_5_1',4)
-        r.set('1_5_2',4)
-        r.set('1_5_3',4)
-        y = r.get('1_5_1')
-        z = r.get('1_5_2')
-        d = r.get('1_5_3')
-        otvet = y + z + d
+        otvet = "Добрый день"
         self.render(pages["main_page"], message=otvet)
 
 class Page_allday_saveHandler(tornado.web.RequestHandler):
