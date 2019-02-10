@@ -92,7 +92,6 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
 
 class MainHandler(tornado.web.RequestHandler):
      def get(self):
-        r = redis.from_url(os.environ.get("REDIS_URL"))
         otvet = r.get('1_5_1') + r.get('1_5_2') + r.get('1_5_3')
         self.render(pages["main_page"], message=otvet)
 
@@ -147,15 +146,14 @@ class BackMainHandler(tornado.web.RequestHandler):
         
 class PageSaveHandler(tornado.web.RequestHandler):                   
      def post(self): 
-        default = redis.from_url(os.environ.get("REDIS_URL"))
-        default.set=('1_5_1',5)
+        r.set=('1_5_1',5)
         day_str = self.get_argument("day_id")
         day = int(day_str)
         template = {
             'days':days,
             'day': day,
             'subjects': subjects,
-            'defaults' : default,
+            'defaults' : r,
             'options' : options
         }
         self.render(pages["admin_page_save"], **template)
@@ -165,14 +163,14 @@ class PageSaveHandler(tornado.web.RequestHandler):
 class PageHandler(tornado.web.RequestHandler):                   
      def post(self): 
         default = redis.from_url(os.environ.get("REDIS_URL"))
-        default.set=('1_5_1',1)
+        r.set=('1_5_1',1)
         day_str = self.get_argument("day_id")
         day = int(day_str)
         template = {
             'days':days,
             'day': day,
             'subjects': subjects,
-            'defaults' : default,
+            'defaults' : r,
             'options' : options
         }
         self.render(pages["admin_page"], **template)
