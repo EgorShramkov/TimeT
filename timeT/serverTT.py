@@ -148,6 +148,7 @@ class BackMainHandler(tornado.web.RequestHandler):
 class PageSaveHandler(tornado.web.RequestHandler):                   
      def post(self): 
         default = redis.from_url(os.environ.get("REDIS_URL"))
+        defaults.set=('1_5_1', '1')
         day_str = self.get_argument("day_id")
         day = int(day_str)
         template = {
