@@ -1,0 +1,55 @@
+<html>
+ <head>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{{days[day]}}</title>
+  <link rel="stylesheet" href="/static/styles1.css" />
+ </head>
+ <body>
+  <form action="/page_allday_save" method="POST">
+       <input class="clickable" type="submit" value="Выйти" />
+  </form>    
+  <form action="/save" method="POST">
+       <input class="clickable" type="submit" value="Сохранить изменения на четверть" />
+       <input hidden="" name="day_id" value={{day}} />
+       <h3>{{days[day]}}</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>класс</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>8</th>
+					<th>9</th>
+					<th>10</th>
+					<th>11</th>
+				</tr>
+			</thead>
+			<tbody id="{{day}}">
+				{% for i in range(1,11) %}
+					<tr>
+						<td>{{i}}</td>
+						{% for grade in range(5,12) %}
+						<td>
+							<select name="{{day}}_{{grade}}_{{i}}">
+								{% for subj_id in options[f'{day}_{grade}_{i}'] %}
+									<option
+									 	{% if subj_id == defaults[f'{day}_{grade}_{i}'] %}
+									 	 selected="selected"
+									 	{% end %}
+										value="{{subj_id}}"
+									>
+										{{subjects[subj_id]}}
+									</option>
+								{% end %}
+							</select>   	
+						</td>
+						{%end%}
+					</tr>
+				{%end%}
+				</form>
+			</tbody>
+		</table>
+ </body>						   						    							
+</html> 
