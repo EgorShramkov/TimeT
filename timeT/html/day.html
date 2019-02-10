@@ -35,7 +35,7 @@
 							<select name="{{day}}_{{grade}}_{{i}}">
 								{% for subj_id in options[f'{day}_{grade}_{i}'] %}
 									<option
-									 	{% if subj_id == defaults.get(f'{day}_{grade}_{i}') %}
+									 	{% if subj_id == int(defaults.get(f'{day}_{grade}_{i}')) %}
 									 	 selected="selected"
 									 	{% end %}
 										value="{{subj_id}}"
