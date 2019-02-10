@@ -37,8 +37,9 @@ pages = {
     "allday": "./html/allday.html"
 }
 
-def save (day, r, self):
+def save (day, self):
    for lesson in day:
+     r = redis.from_url(os.environ.get("REDIS_URL"))
      check = self.get_argument(lesson)
      r.set(lesson, check) 
    return 
@@ -100,19 +101,19 @@ class SaveHandler(tornado.web.RequestHandler):
         day_id_str = self.get_argument("day_id", default=0)
         day_id = int(day_id_str)
         if day_id == 1:
-            save(Monlesson,r,self);
+            save(Monlesson,self);
             self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
         if day_id == 2:
-            save(Monlesson,r,self);
+            save(Tuelesson,self);
             self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
         if day_id == 3:
-            save(Monlesson,r,self);
+            save(Wedlesson,self);
             self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
         if day_id == 4:
-            save(Monlesson,r,self);
+            save(Thulesson,self);
             self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
         if day_id == 5:   
-            save(Monlesson,r,self);        
+            save(Frilesson,self);        
             self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
 
     
