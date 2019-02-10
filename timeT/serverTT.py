@@ -92,9 +92,9 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
 
 class MainHandler(tornado.web.RequestHandler):
      def get(self):
-        r.hset('1_5_1', 4)
-        r.hset('1_5_2', 4)
-        r.hset('1_5_3', 4)
+        r.set('1_5_1',4)
+        r.set('1_5_2',4)
+        r.set('1_5_3',4)
         y = r.hget('1_5_1')
         z = r.hget('1_5_2')
         d = r.hget('1_5_3')
