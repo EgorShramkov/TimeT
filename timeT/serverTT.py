@@ -93,6 +93,7 @@ class MainHandler(tornado.web.RequestHandler):
      def get(self):
         r = redis.from_url(os.environ.get("REDIS_URL"))
         self.render(pages["main_page"], message="Доброго времени суток")
+        r.flushdb()
         r.set('1_5_1', '2')
         r.set('1_5_2', '3')
         r.set('1_5_3', '1')
