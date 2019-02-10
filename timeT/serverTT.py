@@ -497,7 +497,8 @@ class BackMainHandler(tornado.web.RequestHandler):
 
 class PageHandler(tornado.web.RequestHandler):                   
      def post(self): 
-        default = redis.from_url(os.environ.get("REDIS_URL"))
+        r = redis.from_url(os.environ.get("REDIS_URL"))
+        default = r.keys(?_?_?)
         day_str = self.get_argument("day_id")
         day = int(day_str)
         template = {
