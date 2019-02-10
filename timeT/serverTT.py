@@ -442,7 +442,7 @@ class MainHandler(tornado.web.RequestHandler):
         r.set('5_11_8', 1)
         r.set('5_11_9', 1)
         r.set('5_11_10', 1)
-        otvet = r.get('1_5_1',3) + r.get('1_5_2',3) + r.get('1_5_3',1)
+        otvet = r.get('1_5_1') + r.get('1_5_2') + r.get('1_5_3')
         self.render(pages["main_page"], message=otvet)
 
 class Page_allday_saveHandler(tornado.web.RequestHandler):
