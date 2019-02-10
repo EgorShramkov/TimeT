@@ -37,6 +37,12 @@ pages = {
     "allday": "./html/allday.html"
 }
 
+def save (day, r, self):
+   for lesson in day:
+     check = self.get_argument(lesson)
+     r.set(lesson, check) 
+   return 
+   
 
 def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, chat_id_teachers):
    nclas=0
@@ -89,7 +95,27 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
    return
 
 
+class SaveHandler(tornado.web.RequestHandler):
+    def post(self):
+        day_id_str = self.get_argument("day_id", default=0)
+        day_id = int(day_id_str)
+        if day_id == 1:
+            save(Monlesson,r,self);
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
+        if day_id == 2:
+            save(Monlesson,r,self);
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
+        if day_id == 3:
+            save(Monlesson,r,self);
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
+        if day_id == 4:
+            save(Monlesson,r,self);
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
+        if day_id == 5:   
+            save(Monlesson,r,self);        
+            self.render(pages["allday"], message="Спасибо за работу, изменения внесены.")
 
+    
 class MainHandler(tornado.web.RequestHandler):
      def get(self):
         r.set('1_5_1',4)
@@ -187,6 +213,7 @@ def make_app():
     return tornado.web.Application([
          (r"/back_main", BackMainHandler),
          (r"/", MainHandler),
+         (r"/save", SaveHandler),
          (r"/page", PageHandler),
          (r"/back", BackHandler),
          (r"/page_save", PageSaveHandler),
