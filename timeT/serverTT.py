@@ -92,7 +92,10 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
 
 class MainHandler(tornado.web.RequestHandler):
      def get(self):
-        otvet = r.get('1_5_1') + r.get('1_5_2') + r.get('1_5_3')
+        y = r.get('1_5_1')
+        z = r.get('1_5_2')
+        d = r.get('1_5_3')
+        otvet = y + z + d
         self.render(pages["main_page"], message=otvet)
 
 class Page_allday_saveHandler(tornado.web.RequestHandler):
