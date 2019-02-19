@@ -68,7 +68,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
         while y < 45:
             if les == y:
                NewLesson[nlesson] = allLesson[y]
-               y = 44
+               y = 45
             y = y + 1   
         if NewLesson[nlesson] != subjects[int(r.get(Lesson[nlesson]))]:
             otvet= 1
