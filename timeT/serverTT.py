@@ -70,7 +70,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
                NewLesson[nlesson] = allLesson[y]
                y = 44
             y = y + 1   
-        if NewLesson[nlesson] != subjects[r.get(Lesson[nlesson])]:
+        if NewLesson[nlesson] != int(subjects[r.get(Lesson[nlesson])]):
             otvet= 1
             ok=1
             teacher_otvet= 1
