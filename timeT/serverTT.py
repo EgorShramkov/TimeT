@@ -48,7 +48,7 @@ def save (day, self):
 def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, chat_id_teachers):
    nclas=0
    teacher_otvet = 0
-   defaults = redis.from_url(os.environ.get("REDIS_URL"))
+   r = redis.from_url(os.environ.get("REDIS_URL"))
    RED = '\033[91m'
    UNDERLINE = '\033[4m'
    BOLD = '\033[1m' 
@@ -69,8 +69,9 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
             if les == y:
                NewLesson[nlesson] = allLesson[y]
                y = 44
-            y = y + 1    
-        if NewLesson[nlesson] != subjects[defaults[Lesson[nlesson]]]:
+            y = y + 1   
+        default = r.get(Lesson[nlesson])
+        if NewLesson[nlesson] != subjects[default]:
             otvet= 1
             ok=1
             teacher_otvet= 1
