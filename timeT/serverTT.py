@@ -65,10 +65,10 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
         les = int(lesson)
         y=0
         ok=0
-        while y < 46:
+        while y < 47:
             if les == y:
                NewLesson[nlesson] = allLesson[y]
-               y = 46
+               y = 47
             y = y + 1   
         if NewLesson[nlesson] != subjects[int(r.get(Lesson[nlesson]))]:
             otvet= 1
