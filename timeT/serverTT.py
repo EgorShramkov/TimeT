@@ -70,8 +70,7 @@ def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, cha
                NewLesson[nlesson] = allLesson[y]
                y = 44
             y = y + 1   
-        default = r.get(Lesson[nlesson])
-        if NewLesson[nlesson] != subjects[default]:
+        if NewLesson[nlesson] != subjects[r.get(Lesson[nlesson])]:
             otvet= 1
             ok=1
             teacher_otvet= 1
@@ -173,7 +172,6 @@ class BackMainHandler(tornado.web.RequestHandler):
         
 class PageSaveHandler(tornado.web.RequestHandler):                   
      def post(self): 
-        r.set=('1_5_1',5)
         day_str = self.get_argument("day_id")
         day = int(day_str)
         template = {
@@ -190,7 +188,6 @@ class PageSaveHandler(tornado.web.RequestHandler):
 class PageHandler(tornado.web.RequestHandler):                   
      def post(self): 
         default = redis.from_url(os.environ.get("REDIS_URL"))
-        r.set=('1_5_1',1)
         day_str = self.get_argument("day_id")
         day = int(day_str)
         template = {
