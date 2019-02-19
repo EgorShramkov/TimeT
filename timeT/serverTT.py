@@ -48,8 +48,7 @@ def save (day, self):
 def save_send(bot, self,NewLesson,Lesson, NOM, chat_id_mass, day, allLesson, chat_id_teachers):
    nclas=0
    teacher_otvet = 0
-   defaults_path = absolute_path + '/defaults.json'
-   defaults = json.load(open(defaults_path, 'r'))
+   defaults = redis.from_url(os.environ.get("REDIS_URL"))
    RED = '\033[91m'
    UNDERLINE = '\033[4m'
    BOLD = '\033[1m' 
