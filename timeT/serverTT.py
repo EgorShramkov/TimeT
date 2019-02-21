@@ -194,7 +194,7 @@ class PageHandler(tornado.web.RequestHandler):
             'days':days,
             'day': day,
             'subjects': subjects,
-            'defaults' : r,
+            'defaults' : default,
             'options' : options
         }
         self.render(pages["admin_page"], **template)
