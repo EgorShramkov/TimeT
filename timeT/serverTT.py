@@ -171,13 +171,14 @@ class BackMainHandler(tornado.web.RequestHandler):
         
 class PageSaveHandler(tornado.web.RequestHandler):                   
      def post(self): 
+        default = redis.from_url(os.environ.get("REDIS_URL"))
         day_str = self.get_argument("day_id")
         day = int(day_str)
         template = {
             'days':days,
             'day': day,
             'subjects': subjects,
-            'defaults' : r,
+            'defaults' : default,
             'options' : options
         }
         self.render(pages["admin_page_save"], **template)
