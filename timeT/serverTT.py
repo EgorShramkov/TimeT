@@ -7,7 +7,6 @@ import json
 import re
 import redis
 
-r = redis.from_url(os.environ.get("REDIS_URL"))
 absolute_path = os.path.dirname(os.path.abspath(__file__))
 options_path = absolute_path + '/options.json'
 subjects_path = absolute_path + '/subjects.json'
