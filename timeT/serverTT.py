@@ -131,7 +131,7 @@ class PagealldayHandler(tornado.web.RequestHandler):
         if not password == admin_password:
             self.render(pages["main_page"], message="Неверный пароль, попробуйте, пожалуйста, ещё раз.")
         elif  password == admin_password: 
-            self.render(pages["allday"], message="Выберети, пожалуйста, день в который будут вноситься изменения.")
+            self.render(pages["allday"], message="Выберите, пожалуйста, день в который будут вноситься изменения.")
 
 
 class SentHandler(tornado.web.RequestHandler):      
